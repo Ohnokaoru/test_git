@@ -1,5 +1,6 @@
 import random
 
+
 start = 1
 end = 50
 x = random.randint(start, end)
@@ -33,3 +34,5 @@ for i in range(5):
 
 print()
 print(f"答案:{x}")
+
+print("測試回當下sha-1，新增分支並add與commit後，切回master，再merge 要合併的分支")

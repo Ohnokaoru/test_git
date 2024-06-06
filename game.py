@@ -2,17 +2,34 @@ import random
 
 start = 1
 end = 50
-x = random.randint(1, 50)
-print(x)
-for i in range(5):
-    guess = eval(input(f"猜數字str{start}-{end}:"))
+x = random.randint(start, end)
 
+for i in range(5):
+
+    guess = eval(input(f"請猜數字{start}-{end}:"))
+    print(f"機會一共5次，已猜第{i+1}次")
     if guess == x:
         print("答對")
         break
+
     else:
-        print(f"猜錯了，你猜{i+1}次")
+        print(f"猜錯了")
+
         if guess > x:
-            print("猜低一點")
+            if end > guess:
+                print(f"猜低一點")
+                end = guess - 1
+
+            else:
+                print("數字區間錯誤")
+
         else:
-            print("猜高一點")
+            if start < guess:
+                print(f"猜高一點")
+                start = guess + 1
+
+            else:
+                print("數字區間錯誤")
+
+print()
+print(f"答案:{x}")

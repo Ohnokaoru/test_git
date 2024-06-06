@@ -10,4 +10,8 @@ for i in range(5):
         print("答對")
         break
     else:
-        print(f"猜錯了，你猜{i+1}次")
+        # print(f"猜錯了，你猜{i+1}次")
+        if guess > x:
+            print("猜低一點")
+        else:
+            print("猜高一點")

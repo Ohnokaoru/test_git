@@ -35,4 +35,6 @@ for i in range(5):
 print()
 print(f"答案:{x}")
 
-print("測試回當下sha-1，新增分支並add與commit後，切回master，再merge 要合併的分支")
+print(
+    "測試回當下sha-1，新增分支，再進行修改並add與commit後，切回master，再merge 要合併的分支"
+)
